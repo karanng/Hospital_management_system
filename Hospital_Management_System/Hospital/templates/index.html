@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- Breadcrumb -->
+<!-- Page Title -->
+<div class="container mt-0">
+    <div class="row breadcrumb-bar">
+        <div class="col-md-6">
+            <h3 class="block-title">Quick Statistics</h3>
+        </div>
+        <div class="col-md-6">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        <span class="ti-home"></span>
+                    </a>
+                </li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- /Page Title -->
+<!-- /Breadcrumb -->
+<!-- Main Content -->
+<div class="container home">
+    <div class="row">
+        <!-- Widget Item -->
+        <div class="col-md-4">
+            <div class="widget-area proclinic-box-shadow color-red">
+                <div class="widget-left">
+                    <span class="ti-user"></span>
+                </div>
+                <div class="widget-right">
+                    <h4 class="wiget-title">Patients</h4>
+                    <span id="patient-count" class="numeric color-red">{{ patient_count }}</span>
+                </div>
+            </div>
+        </div>
+        <!-- /Widget Item -->
+        <!-- Widget Item -->
+        <div class="col-md-4">
+            <div class="widget-area proclinic-box-shadow color-green">
+                <div class="widget-left">
+                    <span class="ti-bar-chart"></span>
+                </div>
+                <div class="widget-right">
+                    <h4 class="wiget-title">Appointments</h4>
+                    <span id="appointment-count" class="numeric color-green">{{ appointment_count }}</span>
+                </div>
+            </div>
+        </div>
+        <!-- /Widget Item -->
+        <!-- Widget Item -->
+
+        <div class="col-md-4">
+            <div class="widget-area proclinic-box-shadow color-yellow">
+                <div class="widget-left">
+                    <span class="ti-money"></span>
+                </div>
+                <div class="widget-right">
+                    <h4 class="wiget-title">Total Revenue</h4>
+                    <span class="numeric color-yellow">{{ total_revenue }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- /Widget Item -->
+
+        <!-- Widget Item -->
+<div class="col-md-6">
+    <div class="widget-area-2 progress-status proclinic-box-shadow">
+        <h3 class="widget-title">Doctors Specialties</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Specialty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doctor in doctors %}
+                    <tr>
+                        <td>{{ doctor.doctor_name }}</td>
+                        <td>{{ doctor.specialization }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="2">No doctors available</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /Widget Item -->
+    </div>
+<!-- Widget Item -->
+<div class="col-md-6">
+    <div class="widget-area-2 progress-status proclinic-box-shadow">
+        <h3 class="widget-title">Appointments</h3>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Department</th>
+                        <th>Doctor Name</th>
+                        <th>Appointment Date</th>
+                        <th>Time Slot</th>
+                        <th>Token Number</th>
+                        <th>Problem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for appointment in appointments %}
+                    <tr>
+                        <td>{{ appointment.patient_id }}</td>
+                        <td>{{ appointment.department }}</td>
+                        <td>{{ appointment.doctor_name }}</td>
+                        <td>{{ appointment.appointment_date }}</td>
+                        <td>{{ appointment.time_slot }}</td>
+                        <td>{{ appointment.token_number }}</td>
+                        <td>{{ appointment.problem }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="7">No appointments available</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /Widget Item -->
+
+    <!-- Rest of your content goes here -->
+
+</div>
+<!-- /Main Content -->
+
+{% endblock %}

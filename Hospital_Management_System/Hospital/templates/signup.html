@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sign Up</title>
+    <!-- Add your CSS and JavaScript links here -->
+</head>
+<body>
+    <h3>Sign Up</h3>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+</body>
+</html>
+{% endblock %}

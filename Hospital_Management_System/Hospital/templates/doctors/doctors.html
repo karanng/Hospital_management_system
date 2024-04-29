@@ -1,0 +1,43 @@
+<!-- all-doctors.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h3 class="block-title">All Doctors</h3>
+    <div class="table-responsive mb-3">
+        <table id="tableId" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Doctor Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Specialization</th>
+                    <th>Experience</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Doctor Details</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for doctor in doctors %}
+                <tr>
+                    <td>{{ doctor.doctor_name }}</td>
+                    <td>{{ doctor.date_of_birth }}</td>
+                    <td>{{ doctor.specialization }}</td>
+                    <td>{{ doctor.experience }}</td>
+                    <td>{{ doctor.age }}</td>
+                    <td>{{ doctor.phone }}</td>
+                    <td>{{ doctor.email }}</td>
+                    <td>{{ doctor.gender }}</td>
+                    <td>{{ doctor.doctor_details }}</td>
+                    <td>{{ doctor.address }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

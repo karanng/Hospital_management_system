@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h3 class="block-title">All Appointments</h3>
+    <div class="table-responsive mb-3">
+        <table id="tableId" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Department</th>
+                    <th>Doctor Name</th>
+                    <th>Appointment Date</th>
+                    <th>Time Slot</th>
+                    <th>Token Number</th>
+                    <th>Problem</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appointment in appointments %}
+                <tr>
+                    <td>{{ appointment.patient_id }}</td>
+                    <td>{{ appointment.department }}</td>
+                    <td>{{ appointment.doctor_name }}</td>
+                    <td>{{ appointment.appointment_date }}</td>
+                    <td>{{ appointment.time_slot }}</td>
+                    <td>{{ appointment.token_number }}</td>
+                    <td>{{ appointment.problem }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="7">No appointments available</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /Main Content -->
+{% endblock %}
