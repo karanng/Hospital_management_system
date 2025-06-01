@@ -26,11 +26,11 @@ Administrative staff needing to streamline resource management.
 
 Healthcare IT teams looking to digitize hospital operations.
 
-![Screenshot 2025-06-01 133615](https://github.com/user-attachments/assets/88003
-![Screenshot 2025-06-01 133624](https://github.com/user-attachments/assets/2de1e566-c67f-4ab0-aeab-56e065a5f221)
-![Screenshot 2025-06-01 133634](https://github.com/user-attachments/assets/2638758a-8316-47bc-b7bb-8e016e2b13c6)
-![Screenshot 2025-06-01 133646](https://github.com/user-attachments/assets/23208d40-efd2-407f-9428-62e6177413cf)
-c3b-d48e-4c9f-bce2-c5d241a1ca90)
+
+![Screenshot 2025-06-01 133624](https://github.com/user-attachments/assets/d995b161-3f1e-4262-a57a-d8666565f9d9)
+![Screenshot 2025-06-01 133634](https://github.com/user-attachments/assets/87fd55ed-e344-48b0-ab1d-7d65b97404f2)
+![Screenshot 2025-06-01 133646](https://github.com/user-attachments/assets/41a56321-fafa-4b3b-9cec-f603bb11da62)
+![Screenshot 2025-06-01 133615](https://github.com/user-attachments/assets/25747a31-b89a-43e0-bb98-fc718b971468)
 
 
 
